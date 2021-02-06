@@ -1,0 +1,6 @@
+model\io\Output.class
+model\BatteryBaseObject.class
+model\io\Input.class
+CleaningRobotApp.class
+model\CoordinatesWithDirection.class
+model\Coordinates.class
