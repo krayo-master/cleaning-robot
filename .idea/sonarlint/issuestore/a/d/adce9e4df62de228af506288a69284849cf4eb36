@@ -1,0 +1,15 @@
+
+S	java:S106'"9Replace this use of System.out or System.err by a logger.(“ÃÖÞÿÿÿÿÿ
+7	java:S131N""Add a default case to this switch.(·›¸»
+C
+java:S1172g"-Remove this unused method parameter "output".(¹ž¯‰
+7	java:S131(""Add a default case to this switch.(ØÊºû
+<	java:S131o""Add a default case to this switch.(Ì‰¿ëùÿÿÿÿ
+7	java:S131Y""Add a default case to this switch.(·›¸»
+H
+java:S1135"2Complete the task associated to this TODO comment.(µØö
+=	java:S131‚""Add a default case to this switch.(Ì‰¿ëùÿÿÿÿ
+0
+java:S1220""Move this file to a named package.
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ÜÑ‡ª
+M	java:S106"9Replace this use of System.out or System.err by a logger.(¦Ýˆ{

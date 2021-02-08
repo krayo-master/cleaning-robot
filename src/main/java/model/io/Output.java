@@ -1,6 +1,8 @@
 package model.io;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonUnwrapped;
 import model.BatteryBaseObject;
 import model.Coordinates;
 import model.CoordinatesWithDirection;
@@ -8,8 +10,10 @@ import model.CoordinatesWithDirection;
 import java.util.HashSet;
 import java.util.Set;
 
+@JsonPropertyOrder({"visited", "cleaned", "final", "battery"})
 public class Output extends BatteryBaseObject {
 
+    @JsonUnwrapped
     private Set<Coordinates> visited = new HashSet<>();
     private Set<Coordinates> cleaned = new HashSet<>();
 

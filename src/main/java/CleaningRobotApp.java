@@ -16,7 +16,6 @@ public class CleaningRobotApp {
         ObjectMapper objectMapper = new ObjectMapper();
         Output output = new Output();
         try {
-            //TODO FILE? READER? STREAM?
             Input input = objectMapper.readValue(new File("src/main/resources/test2.json"), Input.class);
             int[] position = new int[]{input.getStart().getX(), input.getStart().getY()};
             output.getVisited().add(new Coordinates(position[0], position[1]));
@@ -24,6 +23,7 @@ public class CleaningRobotApp {
             battery = input.getBattery();
             processCommands(input.getCommands(), position, facing, input.getMap(), output);
             output.setBattery(battery);
+            objectMapper.writeValue(new File("src/main/resources/result.json"), output);
             System.out.println("output - cleaned: " + output.toString());
         } catch (IOException ioex) {
             System.out.println("ERROR: json file not found " + ioex.getMessage());
@@ -66,7 +66,7 @@ public class CleaningRobotApp {
                     break;
 
             }
-            output.setResult(new CoordinatesWithDirection(position[0],position[1],facing));
+            output.setResult(new CoordinatesWithDirection(position[0], position[1], facing));
         }
         return true;
     }
